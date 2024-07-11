@@ -19,12 +19,11 @@ const server = app.listen(5000, () => {
 });
 
 const io = new Server(server,
-    // {
-    //     cors: {
-    //         origin: "*",
-    //         methods: ["GET", "POST"],
-    //     },
-    // }
+    {
+        cors: {
+            origin: "*",
+        },
+    }
 );
 
 io.on('connection', (socket) => {
